@@ -1,0 +1,252 @@
+:root {
+    /* Cores */
+    --cor-marrom-escuro: #4c2e24;
+    --cor-bege-claro: #f1e7d4;
+    --cor-vinho: #9e3f2d;
+    --cor-preto-transparente: rgba(0, 0, 0, 0.7);
+
+    /* Fontes */
+    --fonte-bree-serif: 'Bree Serif', serif;
+    --fonte-aoboshi-one: 'Aoboshi One', serif;
+
+    /* Tamanhos de Fonte */
+    --tamanho-fonte-logo-h1: 22px;
+    --tamanho-fonte-logo-h2: 9px;
+    --tamanho-fonte-menu: 10px;
+    --tamanho-fonte-home-h1: 40px;
+    --tamanho-fonte-home-h2: 20px;
+    --tamanho-fonte-pagina-h1: 20px;
+    --tamanho-fonte-pagina-h2: 14px;
+}
+
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #010000;
+    padding-top: 100px; 
+}
+
+/* --- Cabeçalho --- */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--cor-bege-claro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 100px;
+    color: var(--cor-marrom-escuro);
+    /* Propriedades para fixar o header */
+    position: fixed; /* Fixa o elemento na tela */
+    top: 0; /* Alinha o elemento ao topo da tela */
+    left: 0; /* Alinha o elemento à esquerda da tela */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Opcional: Adiciona uma sombra para destaque */
+}
+
+.logo {
+    height: 80px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 5px;
+}
+
+.logo h1 {
+    font-size: var(--tamanho-fonte-logo-h1);
+    font-family: var(--fonte-bree-serif);
+    color: var(--cor-vinho);
+    font-weight: 100;
+    font-style: lighter;
+}
+
+.logo h2 {
+    font-family: var(--fonte-aoboshi-one);
+    font-size: var(--tamanho-fonte-logo-h2);
+    color: var(--cor-marrom-escuro);
+    font-weight: 150;
+}
+
+.menu {
+    width: 700px;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    padding: 10px 40px;
+    color: var(--cor-marrom-escuro);
+    text-decoration: none;
+    font-family: var(--fonte-aoboshi-one);
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* --- Seção Home --- */
+.linha_home {
+    background-image: url('assets/fundoreal1.png');
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: #f1e7d4;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.linha_home h1 {
+    font-family: var(--fonte-bree-serif);
+    font-weight: 150;
+    font-size: var(--tamanho-fonte-home-h1);
+}
+
+.linha_home h2 {
+    font-family: var(--fonte-aoboshi-one);
+    font-weight: 150;
+    font-size: var(--tamanho-fonte-home-h2);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    
+}
+
+.linha_home .container {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h1home {
+    width: 50%;
+    text-shadow: 2px 2px 4px var(--cor-preto-transparente);
+}
+
+.h2home {
+    width: 50%;
+    text-shadow: 2px 2px 4px var(--cor-preto-transparente);
+    margin-top: 20px;
+}
+
+/* --- Seções de Conteúdo (Linhas) --- */
+.linha {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Páginas de Conteúdo --- */
+.pagina1, .pagina2, .pagina3, .pagina4, .pagina5, .pagina6,
+.pagina7, .pagina8, .pagina9, .pagina10, .pagina11, .pagina12,
+.pagina13, .pagina14, .pagina15, .pagina16, .pagina17, .pagina18,
+.pagina19, .pagina20, .pagina21, .pagina22, .pagina23, .pagina24 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vh;
+    height: 10.3vw;
+    background-color: rgba(241, 231, 212); /* Usando rgba para clareza */
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 15px;
+}
+
+.pagina1:hover, .pagina2:hover, .pagina3:hover, .pagina4:hover, .pagina5:hover, .pagina6:hover,
+.pagina7:hover, .pagina8:hover, .pagina9:hover, .pagina10:hover, .pagina11:hover, .pagina12:hover,
+.pagina13:hover, .pagina14:hover, .pagina15:hover, .pagina16:hover, .pagina17:hover, .pagina18:hover,
+.pagina19:hover, .pagina20:hover, .pagina21:hover, .pagina22:hover, .pagina23:hover, .pagina24:hover {
+    transform: scale(1.05);
+    background-color: var(--cor-vinho);
+    cursor: pointer;
+}
+
+.pagina1 h1, .pagina2 h1, .pagina3 h1, .pagina4 h1, .pagina5 h1, .pagina6 h1,
+.pagina7 h1, .pagina8 h1, .pagina9 h1, .pagina10 h1, .pagina11 h1, .pagina12 h1,
+.pagina13 h1, .pagina14 h1, .pagina15 h1, .pagina16 h1, .pagina17 h1, .pagina18 h1,
+.pagina19 h1, .pagina20 h1, .pagina21 h1, .pagina22 h1, .pagina23 h1, .pagina24 h1 {
+    font-size: var(--tamanho-fonte-pagina-h1);
+    font-family: var(--fonte-aoboshi-one);
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.pagina1 h2, .pagina2 h2, .pagina3 h2, .pagina4 h2, .pagina5 h2, .pagina6 h2,
+.pagina7 h2, .pagina8 h2, .pagina9 h2, .pagina10 h2, .pagina11 h2, .pagina12 h2,
+.pagina13 h2, .pagina14 h2, .pagina15 h2, .pagina16 h2, .pagina17 h2, .pagina18 h2,
+.pagina19 h2, .pagina20 h2, .pagina21 h2, .pagina22 h2, .pagina23 h2, .pagina24 h2 {
+    font-size: var(--tamanho-fonte-pagina-h2);
+    font-family: var(--fonte-bree-serif);
+    margin-bottom: 4px;
+    margin-left: 10px;
+}
+
+.foto {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* --- Rodapé --- */
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: var(--cor-bege-claro);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--cor-marrom-escuro);
+    margin-top: 20px;
+}
+
+.col_rodape {
+    width: 400px;
+    height: 100%;
+    display: flex; /* Adicionado display flex para centralizar conteúdo */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--fonte-aoboshi-one);
+    font-size: var(--tamanho-fonte-menu);
+}
